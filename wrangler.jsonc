@@ -1,8 +1,5 @@
 {
   "name": "terra-craft",
   "compatibility_date": "2025-09-01",
-  "assets": {
-    "directory": "./dist",
-    "not_found_handling": "single-page-application"
-  }
+  "pages_build_output_dir": "./dist"
 }
