@@ -10,7 +10,7 @@
 npm install
 npm run dev      # 開発サーバー
 npm test         # シミュレーションのテスト
-npm run build    # 型検査 + 本番ビルド（dist/）
+npm run build    # 本番ビルド（dist/）。型検査は npm run typecheck
 ```
 
 `main` への push で GitHub Pages に公開される（リポジトリの Settings → Pages で Source を GitHub Actions にする）。
@@ -54,3 +54,8 @@ npm run build    # 型検査 + 本番ビルド（dist/）
 - シミュレーションの科学的な性質（質量保存、雨陰、侵食の向きなど）と URL 共有は、単体テスト 67 件で確認した。
 - 画面（React / Three.js 部分）は、依存パッケージを入れた環境での実行、型検査、ブラウザでの目視確認を**まだ行っていない**。最初の `npm run build` で型エラーが出る可能性がある。
 - 192×192 での 1 ステップは、テスト環境で 150 ms 未満。目標の 50 ms は未確認。
+
+## Cloudflare Pages で公開する
+
+- Build command: `npm install && npm run build`
+- Build output directory: `dist`

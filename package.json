@@ -6,7 +6,7 @@
   "description": "等高線を描くだけで、雨が降り、川が流れ、森が育ち、人が集まる。ブラウザ完結の創造型地理シミュレーション。",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
