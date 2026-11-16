@@ -55,7 +55,11 @@ npm run build    # 本番ビルド（dist/）。型検査は npm run typecheck
 - 画面（React / Three.js 部分）は、依存パッケージを入れた環境での実行、型検査、ブラウザでの目視確認を**まだ行っていない**。最初の `npm run build` で型エラーが出る可能性がある。
 - 192×192 での 1 ステップは、テスト環境で 150 ms 未満。目標の 50 ms は未確認。
 
-## Cloudflare Pages で公開する
+## Cloudflare で公開する
+
+Workers（静的アセット）の場合は、リポジトリの `wrangler.jsonc` が `dist` を配信する。
 
 - Build command: `npm install && npm run build`
-- Build output directory: `dist`
+- Deploy command: `npx wrangler deploy`
+
+Pages の場合は、Build output directory を `dist` にする。
